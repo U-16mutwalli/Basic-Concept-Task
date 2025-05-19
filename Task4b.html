@@ -1,0 +1,19 @@
+<!--------2.Create a color picker that changes the page background color.------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker</title>
+</head>
+<body>
+<input type="color" id="colorPicker">
+
+<script>
+   document.getElementById('colorPicker').oninput=function(){
+    document.body.style.background=this.value;
+
+   };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-----Validate a form (e.g., email, password strength) on submit------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="email" id="email" placeholder="Enter email" required>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById('myForm').onsubmit = function(event) {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (!email.includes('@') || password.length < 6) {
+            event.preventDefault();
+            alert('Invalid email or password too short.');
+        }
+    };
+</script>
+
+</body>
+</html>

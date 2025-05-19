@@ -1,0 +1,30 @@
+<!-----1.Build a counter with + / – buttons.----->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+</head>
+<body>
+
+<div>
+    <button id="decrement">-</button>
+    <span id="count">0</span>
+    <button id="increment">+</button>
+</div>
+
+<script>
+   
+     let count = 0;
+       document.getElementById('increment').onclick = () => {
+           count++;
+           document.getElementById('count').innerText = count;
+       };
+       document.getElementById('decrement').onclick = () => {
+           count--;
+           document.getElementById('count').innerText = count;
+       };
+</script>
+
+</body>
+</html>
